@@ -1,0 +1,24 @@
+{
+  "name": "data-selfie-app",
+  "version": "1.0.0",
+  "description": "this is the data selfie app by Joey Lee",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "example",
+    "data",
+    "selfieapp"
+  ],
+  "type": "module",
+  "author": "Based on Joey Lee, by Cristina Ionica",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nedb": "^1.8.0",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.4"
+  }
+}

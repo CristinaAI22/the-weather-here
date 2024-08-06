@@ -1,0 +1,24 @@
+body {
+  font-family: "Poppins";
+  color: #212121;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding: 0;
+}
+
+p {
+  padding: 10px;
+  background-color: #ffaaff;
+}
+#checkinMap {
+  height: 480px;
+  margin: 20px;
+}
