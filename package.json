@@ -1,15 +1,16 @@
 {
-  "name": "data-selfie-app",
+  "name": "the-weather-app",
   "version": "1.0.0",
-  "description": "this is the data selfie app by Joey Lee",
+  "description": "this is the weather app ftom YT course by CodingTrain inspired by Joey Lee",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "example",
     "data",
-    "selfieapp"
+    "weatherapp"
   ],
   "type": "module",
   "author": "Based on Joey Lee, by Cristina Ionica",
