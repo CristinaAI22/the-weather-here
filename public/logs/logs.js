@@ -3,7 +3,9 @@ const attribution =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
 const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-const tiles = L.tileLayer(tileUrl, { attribution });
+const tiles = L.tileLayer(tileUrl, {
+  attribution: attribution,
+});
 tiles.addTo(myMap);
 getData();
 

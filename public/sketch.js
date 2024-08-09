@@ -3,10 +3,11 @@ let lat, lon;
 if ("geolocation" in navigator) {
   console.log("geolocation available");
   navigator.geolocation.getCurrentPosition(async (position) => {
-    let lat, lon, weather, air;
+    let lat, lon, weather, icon, air, city, region, country;
     try {
       lat = position.coords.latitude;
       lon = position.coords.longitude;
+
       document.getElementById("lat").textContent = lat.toFixed(2);
       document.getElementById("lon").textContent = lon.toFixed(2);
 
@@ -15,7 +16,15 @@ if ("geolocation" in navigator) {
       const json = await response.json();
       console.log(json);
 
+      city = json.weather.location.name;
+      region = json.weather.location.region;
+      country = json.weather.location.country;
+      document.getElementById("city").textContent = city;
+      document.getElementById("region").textContent = region;
+      document.getElementById("country").textContent = country;
+
       weather = json.weather.current;
+      icon = json.weather.current.condition.icon;
 
       if (
         json.air_quality.results &&
@@ -38,6 +47,7 @@ if ("geolocation" in navigator) {
 
       document.getElementById("summary").textContent = weather.condition.text;
       document.getElementById("temp").textContent = weather.temp_c;
+      document.getElementById("icon").src = icon;
     } catch (err) {
       console.error(err);
       air = { value: -1 };
